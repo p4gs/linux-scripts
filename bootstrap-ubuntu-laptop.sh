@@ -29,3 +29,19 @@ sudo apt install brave-browser
 
  # Install Timeshift
 sudo apt install timeshift
+
+# Install Plasma KDE and Chrome Remote Desktop
+## More context can be found in the following articles
+### https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine
+### https://support.google.com/chrome/answer/1649523#zippy=%2Cuse-chrome-remote-desktop-on-linux
+
+sudo apt install --assume-yes tasksel
+
+wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+
+sudo apt install --assume-yes ./chrome-remote-desktop_current_amd64.deb
+
+sudo DEBIAN_FRONTEND=noninteractive \
+    apt install --assume-yes  task-kde-desktop
+
+sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/startkde" > /etc/chrome-remote-desktop-session'

@@ -45,3 +45,5 @@ sudo DEBIAN_FRONTEND=noninteractive \
     apt install --assume-yes  task-kde-desktop
 
 sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/startkde" > /etc/chrome-remote-desktop-session'
+
+# This comment resolves issue2: https://github.com/p4gs/linux-scripts/blob/8eb199e7d33844b8aab30a9545c577bdd553331e/bootstrap-ubuntu-laptop.sh#L49
